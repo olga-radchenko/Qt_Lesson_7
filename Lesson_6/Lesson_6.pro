@@ -11,13 +11,27 @@ CONFIG += c++17
 SOURCES += \
     figure.cpp \
     graphics_window.cpp \
-    main.cpp
+    main.cpp \
+    mainwindow.cpp \
+    myqplaintextedit.cpp
 
 HEADERS += \
     figure.h \
     graphics_window.h \
+    mainwindow.h \
+    myqplaintextedit.h
+
+FORMS += \
+    mainwindow.ui
+
+TRANSLATIONS += \
+    Lesson_6_en_US.ts
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    dark_theme.qss \
+    light_theme.qss
